@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="checkout">
+
+  <!-- LEFT COLUMN -->
+  <div class="checkout-left">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="Twinkling Tree Logo" />
+    </div>
+
+    <!-- Express Checkout -->
+    <div class="express-box">
+      <div class="express-title">Express Checkout</div>
+
+      <div class="express-buttons">
+        <button class="paypal">
+          <img src="assets/images/paypal_extended_logo.svg.png" alt="PayPal">
+        </button>
+        <button class="apple">
+          <img src="assets/images/Apple-Pay.png" alt="Apple Pay">
+        </button>
+      </div>
+
+      <div class="express-or">Or</div>
+    </div>
+
+    <p style="margin-top:30px; color:#292929; text-align: center;">
+      Continue below to pay with a credit card
+    </p>
+    <form>
+
+      <h3>Contact Information</h3>
+      <input type="email" class="input" placeholder="Email Address" required>
+      <label class="checkbox-wrap">
+      <input type="checkbox" checked>
+      <span>Email me with news and offers</span>
+      </label>
+      
+
+
+
+<h3>Shipping Address</h3>
+
+<!-- COUNTRY (floating label style) -->
+<div class="input-group">
+  <label class="floating-label">Country</label>
+  <select class="input" required>
+    <option value="" disabled selected hidden></option>
+
+    <option value="AF">Afghanistan</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Algeria</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaijan</option>
+    <option value="BH">Bahrain</option>
+    <option value="BD">Bangladesh</option>
+    <option value="BE">Belgium</option>
+    <option value="BR">Brazil</option>
+    <option value="BN">Brunei</option>
+    <option value="BG">Bulgaria</option>
+    <option value="CA">Canada</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CO">Colombia</option>
+    <option value="HR">Croatia</option>
+    <option value="CZ">Czech Republic</option>
+    <option value="DK">Denmark</option>
+    <option value="EG">Egypt</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+    <option value="DE">Germany</option>
+    <option value="GR">Greece</option>
+    <option value="HK">Hong Kong</option>
+    <option value="HU">Hungary</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IE">Ireland</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italy</option>
+    <option value="JP">Japan</option>
+    <option value="KR">South Korea</option>
+    <option value="MY">Malaysia</option>
+    <option value="MX">Mexico</option>
+    <option value="NL">Netherlands</option>
+    <option value="NZ">New Zealand</option>
+    <option value="NG">Nigeria</option>
+    <option value="NO">Norway</option>
+    <option value="PK">Pakistan</option>
+    <option value="PE">Peru</option>
+    <option value="PH">Philippines</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="RO">Romania</option>
+    <option value="RU">Russia</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="SG">Singapore</option>
+    <option value="ZA">South Africa</option>
+    <option value="ES">Spain</option>
+    <option value="SE">Sweden</option>
+    <option value="CH">Switzerland</option>
+    <option value="TW">Taiwan</option>
+    <option value="TH">Thailand</option>
+    <option value="TR">Turkey</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="GB">United Kingdom</option>
+    <option value="US">United States</option>
+    <option value="VN">Vietnam</option>
+    <option value="ZW">Zimbabwe</option>
+  </select>
+</div>
+
+<!-- NAME -->
+<div class="row">
+  <input type="text" class="input" placeholder="First name" required>
+  <input type="text" class="input" placeholder="Last name" required>
+</div>
+
+<!-- ADDRESS -->
+<input type="text" class="input" placeholder="Address" required>
+<input type="text" class="input" placeholder="Apartment, suite, etc. (optional)">
+
+<!-- CITY / STATE / ZIP -->
+<div class="row">
+  <input type="text" class="input" placeholder="City" required>
+
+  <div class="input-group">
+    <label class="floating-label">State</label>
+    <select class="input" required>
+      <option value="" disabled selected hidden></option>
+      <option>CA</option>
+      <option>NY</option>
+      <option>TX</option>
+    </select>
+  </div>
+
+  <input type="text" class="input" placeholder="ZIP code" required>
+</div>
+
+<!-- PHONE -->
+<input type="tel" class="input" placeholder="Phone" required>
+
+
+
+      <h3>Shipping Address</h3>
+      <select class="input">
+        <option>United States</option>
+        <option>Canada</option>
+        <option>United Kingdom</option>
+      </select>
+
+      <div class="row">
+        <input type="text" class="input" placeholder="First name" required>
+        <input type="text" class="input" placeholder="Last name" required>
+      </div>
+      <input type="text" class="input" placeholder="Address" required>
+      <input type="text" class="input" placeholder="Apartment, suite, etc. (optional)">
+      <div class="row">
+        <input type="text" class="input" placeholder="City" required>
+        <select class="input" required>
+          <option disabled selected>State</option>
+          <option>CA</option>
+          <option>NY</option>
+          <option>TX</option>
+        </select>
+        <input type="text" class="input" placeholder="ZIP code" required>
+      </div>
+      <input type="tel" class="input" placeholder="Phone" required>
+
+      <h3>Billing Address</h3>
+      <div class="billing-box">
+        <label class="radio">
+          <input type="radio" name="billing" checked>
+          <span>Same as shipping address</span>
+        </label>
+
+        <label class="radio">
+          <input type="radio" name="billing">
+          <span>Use a different billing address</span>
+        </label>  
+      </div>
+
+      <h3>Shipping Method</h3>
+      <div class="shipping-box">
+        <label class="shipping-option">
+    <div class="radio-left">
+      <input type="radio" name="shipping" checked>
+      <span>Tracked & Insured</span>
+    </div>
+    <span class="ship-price">Free</span>
+  </label>
+
+      </div>
+      <h3>Payment Information</h3>
+      <p class="secure">All transactions are secure and encrypted.</p>
+
+<div class="payment-box">
+
+  <label class="radio">
+    <input type="radio" name="payment" checked>
+    <span>Credit Card</span>
+  </label>
+
+  <div class="card-fields">
+    <input type="text" class="input" placeholder="Card number" required>
+    <input type="text" class="input" placeholder="Name on card" required>
+    <div class="row">
+      <input type="text" class="input" placeholder="Expiry date (MM / YY)" required>
+      <input type="text" class="input" placeholder="Security code" required>
+    </div>
+  </div>
+
+  <label class="radio">
+    <input type="radio" name="payment">
+    <span>PayPal</span>
+  </label>
+
+</div>
+
+<label class="checkbox-wrap" style="margin-top:20px;">
+  <input type="checkbox">
+  <span>
+    <strong>Get 25% OFF on Your Next Order</strong><br>
+    Want exclusive deals? Check this box to receive the best offers to your phone. You can reply STOP to cancel or HELP for help. Msg frequency varies. Msg & data rates may apply. See <u>Terms</u> & <u>Privacy</u>.
+  </span>
+</label>
+
+      <button type="submit" class="complete-order">Complete Order</button>
+
+    </form>
+
+    <div class="footer-text">
+      TwinklingTree, All rights reserved.
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="checkout-right">
+    <h3>Order Summary</h3>
+
+    <div class="product">
+      <img src="assets/images/product1.png" alt="Fairy Light Spirit Tree">
+      <div><p>Fairy Light Spirit Tree</p></div>
+      <span>$39.99</span>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/product2.png" alt="Enchanted Lunar Lamp">
+      <div><p>Enchanted Lunar Lamp</p></div>
+      <span>$39.99</span>
+    </div>
+
+    <div class="summary">
+      <div><span>Tax</span><span>$2.98</span></div>
+      <div><span>Shipping</span><span>$0.00</span></div>
+      <div class="total"><span>Total</span><span>$82.96</span></div>
+    </div>
+
+    <div class="discount">
+      <h3>Discount Code</h3>
+      <div class="discount-box">
+        <input type="text" placeholder="Discount code">
+        <button class="apply-btn">→</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
