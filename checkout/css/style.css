@@ -1,4 +1,14 @@
 /* =========================
+   GLOBAL RESET
+========================= */
+*,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================
    AVENIR LT PRO FONTS
 ========================= */
 
@@ -45,30 +55,31 @@ body {
    CHECKOUT LAYOUT
 ========================= */
 .checkout {
-  display: flex;
   max-width: 1366px;
-  margin: auto;
-  background: transparent;
-  overflow: hidden;
-  align-items: stretch;
-  gap: 0;
+  align-items: center-center;
+  margin: 0 auto; 
+  display: flex;
+  flex-wrap: nowrap; /* keep columns side by side */
+  min-height: 100vh;
 }
+
+
 
 .checkout-left {
-  background: #ffffff;
-  width: 816px   ;
   flex: 0 0 60%;
   padding: 40px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
 }
+
 
 .checkout-right {
-  background: #fafafa;
-  width: 550px;
-  padding-left: 52px;
-  padding-right: 52px;
-  padding-top: 132px;
-
+  flex: 0 0 40%;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #fafafa;
 }
+
 
 .logo {
   text-align: center;
@@ -286,6 +297,8 @@ h3 {
 }
 
 .complete-order {
+  align-items: center;
+  gap: 11px;
   width: 100%;
   padding: 16px;
   background: #000;
@@ -309,6 +322,11 @@ h3 {
 .complete-order:active {
   transform: translateY(0);
 }
+
+.complete-order img {
+  margin-right: 11px;
+}
+
 
 /* =========================
    ORDER SUMMARY
@@ -507,7 +525,6 @@ input[type="radio"]:checked::after {
   justify-content: space-between;
   align-items: center;
   padding: 14px;
-  border-bottom: 1px solid #efefef;
   cursor: pointer;
 }
 .radio-left {
@@ -528,13 +545,6 @@ input[type="radio"]:checked::after {
   margin-bottom: 12px;
 }
 
-.card-fields {
-  margin-top: 16px;
-  padding: 12px;
-  background: #fafafa;
-  border-radius: 6px;
-}
-
 .footer-text {
   margin-top: 40px;
   padding-top: 20px;
@@ -544,21 +554,200 @@ input[type="radio"]:checked::after {
   font-size: 13px;
 }
 
+/* For card number input with lock icon */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+
+}
+
+.input-wrapper .input {
+  width: 100%;
+  padding-right: 35px; /* space para sa icon */
+}
+
+.lock-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
 
 
 /* =========================
-   RESPONSIVE DESIGN
+   CHECKOUT FORM FIXES
+========================= */
+
+/* Standard input styling */
+.checkout-left .input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.checkout-left .input:focus {
+  outline: none;
+  border: 2px solid #000;
+  background: #fafafa;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   ROWS AND FORM-ROW
+========================= */
+.checkout-left .row,
+.checkout-left .form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.checkout-left .row .input,
+.checkout-left .form-row .input,
+.checkout-left .form-row .input-group {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0; /* fix para sa overflow issues sa mobile */
+}
+
+/* =========================
+   INPUT GROUP / FLOATING LABEL
+========================= */
+
+/* Container */
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Floating label only for Country */
+.input-group .floating-label {
+  position: absolute;
+  top: 6px;
+  left: 14px;
+  font-size: 11px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Show floating label when select has value or is focused */
+.input-group select.input:valid + .floating-label,
+.input-group select.input:focus + .floating-label {
+  top: -8px;
+  font-size: 11px;
+  color: #292929;
+  background: #fff;
+  padding: 0 4px;
+}
+
+/* Remove float for City / State / Zip */
+.checkout-left .form-row .input-group .floating-label {
+  position: static;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   SELECT DROPDOWN ARROW
+========================= */
+select.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url('/assets/images/arrowdown.png') no-repeat;
+  background-position: right 13px center;
+  background-size: 10px 10px;
+  padding-right: 35px;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+}
+
+/* Disabled / not required state for State */
+select.input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+
+
+
+/* =========================
+   PAYMENT INFORMATION FIX
+========================= */
+
+.payment-method {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid #efefef;
+}
+
+.payment-method:last-child {
+  border-bottom: none;
+}
+
+.card-icons {
+  display: flex;
+  gap: 6px;
+}
+
+.card-icons img {
+  width: 32px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.paypal-logo {
+  width: 70px;
+  height: auto;
+}
+
+.card-fields {
+  padding: 14px;
+  background: #fafafa;
+  margin-top: 16px;
+  border-radius: 6px;
+}
+
+.card-fields .row {
+  display: flex;
+  gap: 10px;
+}
+
+.card-fields .input {
+  margin-bottom: 12px;
+
+}
+
+.card-fields .row .input {
+  margin-bottom: 0;
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-  .checkout {
+  .checkout-left .row,
+  .checkout-left .form-row {
     flex-direction: column;
+    gap: 12px;
   }
-  .checkout-left,
-  .checkout-right {
-    width: 100%;
-    border: none;
-  }
-  .checkout-right {
-    border-top: 1px solid #e0e0e0;
+
+  select.input {
+    background-position: right 13px center;
   }
 }
