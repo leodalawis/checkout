@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout Page</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -24,7 +24,6 @@
             <!-- Express Checkout -->
             <div class="express-box">
                 <div class="express-title">Express Checkout</div>
-
                 <div class="express-buttons">
                     <button class="paypal">
                         <img src="assets/images/paypal_extended_logo.svg.png" />
@@ -33,7 +32,6 @@
                         <img src="assets/images/Apple-Pay.png" />
                     </button>
                 </div>
-
                 <div class="express-or">Or</div>
             </div>
 
@@ -43,23 +41,21 @@
 
             <form>
 
-                <h3>Contact Information</h3>
+                <!-- Contact Info -->
+                <h4>Contact Information</h4>
                 <input type="email" class="input" placeholder="Email Address" required>
-
                 <label class="checkbox-wrap">
                     <input type="checkbox" checked>
                     <span>Email me with news and offers</span>
                 </label>
 
-                <h3>Shipping Address</h3>
-
-                <!-- NAME -->
+                <!-- Shipping Address -->
+                <h4>Shipping Address</h4>
                 <div class="row">
                     <input type="text" class="input" placeholder="First name" required>
                     <input type="text" class="input" placeholder="Last name" required>
                 </div>
 
-                <!-- COUNTRY -->
                 <div class="input-group">
                     <label class="floating-label">Country</label>
                     <select id="country" class="input" required>
@@ -76,98 +72,79 @@
                     </select>
                 </div>
 
-                <!-- ADDRESS -->
                 <input type="text" class="input" placeholder="Address" required>
                 <input type="text" class="input" placeholder="Apartment, suite, etc. (optional)">
 
-                <!-- CITY STATE ZIP -->
-                <div class="form-row">
-
+                <div class="flex-row">
                     <div class="input-group">
                         <input type="text" class="input" placeholder="City" required>
                     </div>
-
                     <div class="input-group">
                         <select id="state" class="input" required>
                             <option value="" disabled selected hidden>State/Province</option>
-                            <!-- ibang options dito -->
                         </select>
                     </div>
-
                     <div class="input-group">
                         <input type="text" class="input" placeholder="Zip Code" required>
                     </div>
-
                 </div>
 
-                <!-- PHONE -->
                 <input type="tel" class="input" placeholder="Phone" required>
 
+                <!-- Billing Address -->
                 <h3>Billing Address</h3>
-
                 <div class="billing-box">
-
                     <label class="radio">
                         <input type="radio" name="billing" value="same" checked>
                         <span>Same as shipping address</span>
                     </label>
-
                     <label class="radio">
                         <input type="radio" name="billing" value="different">
                         <span>Use a different billing address</span>
                     </label>
 
-                </div>
-
-                <!-- BILLING FORM (HIDDEN DEFAULT) -->
-                <div id="billing-form" style="display:none; margin-top:15px;">
-
-                    <div class="row">
-                        <input type="text" class="input" placeholder="First name">
-                        <input type="text" class="input" placeholder="Last name">
-                    </div>
-
-                    <div class="input-group">
-                        <label class="floating-label">Country</label>
-                        <select id="billing-country" class="input">
-                            <option value="" disabled selected hidden></option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="GB">United Kingdom</option>
-                            <option value="AU">Australia</option>
-                            <option value="PH">Philippines</option>
-                            <option value="IN">India</option>
-                        </select>
-                    </div>
-
-                    <input type="text" class="input" placeholder="Address">
-                    <input type="text" class="input" placeholder="Apartment, suite, etc. (optional)">
-
-                    <div class="form-row">
-
-                        <div class="input-group">
-                            <input type="text" class="input" placeholder="City" required>
+                    <div id="billing-form" style="display:none;">
+                        <div class="row">
+                            <input type="text" class="input" placeholder="First name">
+                            <input type="text" class="input" placeholder="Last name">
                         </div>
 
                         <div class="input-group">
-                            <select id="billing-state" class="input" required>
-                                <option value="" disabled selected hidden>State/Province</option>
-                                <!-- ibang options dito -->
+                            <label class="floating-label">Country</label>
+                            <select id="billing-country" class="input">
+                                <option value="" disabled selected hidden></option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="AU">Australia</option>
+                                <option value="PH">Philippines</option>
+                                <option value="IN">India</option>
                             </select>
                         </div>
 
-                        <div class="input-group">
-                            <input type="text" class="input" placeholder="Zip Code" required>
+                        <input type="text" class="input" placeholder="Address">
+                        <input type="text" class="input" placeholder="Apartment, suite, etc. (optional)">
+
+                        <div class="flex-row">
+                            <div class="input-group">
+                                <input type="text" class="input" placeholder="City" required>
+                            </div>
+                            <div class="input-group">
+                                <select id="billing-state" class="input" required>
+                                    <option value="" disabled selected hidden>State/Province</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="input" placeholder="Zip Code" required>
+                            </div>
                         </div>
 
+                        <input type="tel" class="input" placeholder="Phone">
                     </div>
-
-                    <input type="tel" class="input" placeholder="Phone">
-
                 </div>
 
+                <!-- Shipping Method -->
                 <h3>Shipping Method</h3>
-
                 <div class="shipping-box">
                     <label class="shipping-option">
                         <div class="radio-left">
@@ -178,67 +155,68 @@
                     </label>
                 </div>
 
-                <!-- PAYMENT INFORMATION -->
+                <!-- Payment Information -->
                 <h3>Payment Information</h3>
                 <p class="secure">All transactions are secure and encrypted.</p>
 
                 <div class="payment-box">
-
-                    <!-- CREDIT CARD OPTION -->
-                    <label class="radio payment-method">
+                    <!-- Credit Card Option -->
+                    <label class="radio credit-card-method">
                         <div class="radio-left">
-                            <input type="radio" name="payment" checked>
+                            <input type="radio" name="payment-method" value="credit" checked>
                             <span>Credit Card</span>
                         </div>
-
                         <div class="card-icons">
-                            <img src="./assets/images/Visa.png" alt="logo" style="width:34.86px; height:23.9px;" />
-                            <img src="./assets/images/MasterCard.png" alt="logo" style="width:34.86px; height:23.9px;" />
-                            <img src="./assets/images/Amex.png" alt="logo" style="width:34.86px; height:23.9px;" />
-                            <img src="./assets/images/Discover.png" alt="logo" style="width:34.86px; height:23.9px;" />
+                            <img src="./assets/images/Visa.png" alt="Visa logo" />
+                            <img src="./assets/images/MasterCard.png" alt="MasterCard logo" />
+                            <img src="./assets/images/Amex.png" alt="Amex logo" />
+                            <img src="./assets/images/Discover.png" alt="Discover logo" />
                         </div>
                     </label>
 
                     <div class="card-fields">
-
                         <div class="input-wrapper">
                             <input class="input" placeholder="Card number" />
-                            <img class="lock-icon" src="./assets/images/locked.png" alt="lock" style="width: 16px; height: 16.7px;" />
+                            <img class="lock-icon" src="./assets/images/locked.png" alt="lock" />
                         </div>
-
                         <input class="input" placeholder="Name on card" />
-
                         <div class="row">
                             <input class="input" placeholder="Expiration date (MM / YY)" />
                             <input class="input" placeholder="Security code" />
                         </div>
-
-                        <!-- PAYPAL OPTION -->
-                        <label class="radio payment-method">
-                            <div class="radio-left">
-                                <input type="radio" name="payment">
-                                <span>Paypal</span>
-                            </div>
-
-                            <img class="paypal-logo" src="./assets/images/paypal-logo.png" alt="logo" style="width:90.18px; height:24.86px;" />
-                        </label>
-
                     </div>
 
+                    <!-- PayPal Option -->
+                    <label class="radio paypal-method">
+                        <div class="radio-left">
+                            <input type="radio" name="payment-method" value="paypal">
+                            <span>PayPal</span>
+                        </div>
+                        <div class="paypal-icon">
+                            <img src="./assets/images/paypal-logo.png" alt="PayPal logo" />
+                        </div>
+                    </label>
+
+                    <!-- PayPal Message -->
+                    <div class="paypal-message" style="display: none;">
+                        <p>After clicking "Complete Order", you will be redirected to PayPal to complete your purchase securely.</p>
+                    </div>
+                </div>
+
+                <!-- Complete Order Button -->
+                <div>
                     <button type="submit" class="complete-order">
                         <img src="./assets/images/pseudo-complete-order.png" alt="lock" style="width: 20px; height: 22px;" />
                         COMPLETE ORDER
                     </button>
 
+                    <div class="footer-text">
+                        TwinklingTree, All rights reserved.
+                    </div>
                 </div>
 
             </form>
-
-            <div class="footer-text">
-                TwinklingTree, All rights reserved.
-            </div>
-
-        </div>
+        </div> <!-- end checkout-left -->
 
         <!-- RIGHT COLUMN -->
         <div class="checkout-right">
@@ -277,178 +255,88 @@
                 <img src="./assets/images/trust pilot.png" alt="trustpilot" style="width: 330px; height: 75px;" />
             </div>
 
-<!-- Reviews Section -->
-<div class="reviews">
+            <!-- Reviews Section -->
+            <div class="reviews">
 
-  <!-- Review 1 -->
-  <div class="review review1">
-    <div class="review-header">
-      <p>
-        <span class="name">Christina Z.,</span>
-        <span class="address">Dallas, TX</span>
-        <span class="verified">
-          <span class="box"></span>
-          Verified Buyer
-        </span>
-      </p>
-    </div>
-    <div class="stars">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-    </div>
-    <p class="review-text">
-      After my Fairy Light Spirit tree arrived I absolutely fell in LOVE with it! I couldn’t help myself and ordered 3 more!
-    </p>
-  </div>
+                <!-- Review 1 -->
+                <div class="review review1">
+                    <div class="review-header">
+                        <p>
+                            <span class="name">Christina Z.,</span>
+                            <span class="address">Dallas, TX</span>
+                            <span class="verified">
+                                <i class="fa-regular fa-check-square"></i>
+                                Verified Buyer
+                            </span>
+                        </p>
+                    </div>
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="review-text">
+                        After my Fairy Light Spirit tree arrived I absolutely fell in LOVE with it! I couldn’t help myself and ordered 3 more!
+                    </p>
+                </div>
 
-  <!-- Review 2 -->
-  <div class="review review2">
-    <div class="review-header">
-      <p>
-        <span class="name">Brittany M,</span>
-        <span class="address">Miami, FL</span>
-        <span class="verified">
-          <span class="box"></span>
-          Verified Buyer
-        </span>
-      </p>
-    </div>
-    <div class="stars">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-    </div>
-    <p class="review-text">
-      TwinklingTree is my go-to store for home decor! All their pieces are so stunning and unique! I don’t miss shopping in stores at all. This is as easy as it comes. Check out online and receive a beautiful statement piece at your doorstep!
-    </p>
-  </div>
+                <!-- Review 2 -->
+                <div class="review review2">
+                    <div class="review-header">
+                        <p>
+                            <span class="name">Brittany M,</span>
+                            <span class="address">Miami, FL</span>
+                            <span class="verified">
+                                <i class="fa-regular fa-check-square"></i>
+                                Verified Buyer
+                            </span>
+                        </p>
+                    </div>
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="review-text">
+                        TwinklingTree is my go-to store for home decor! All their pieces are so stunning and unique! I don’t miss shopping in stores at all. This is as easy as it comes. Check out online and receive a beautiful statement piece at your doorstep!
+                    </p>
+                </div>
 
-  <!-- Review 3 -->
-  <div class="review review3">
-    <div class="review-header">
-      <p>
-        <span class="name">Katy B.,</span>
-        <span class="address">London, UK</span>
-        <span class="verified">
-          <span class="box"></span>
-          Verified Buyer
-        </span>
-      </p>
-    </div>
-    <div class="stars">
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-    </div>
-    <p class="review-text">
-      This was my first time buying home decor from Facebook, and customer service came to the rescue. 10/10 service!
-    </p>
-  </div>
+                <!-- Review 3 -->
+                <div class="review review3">
+                    <div class="review-header">
+                        <p>
+                            <span class="name">Katy B.,</span>
+                            <span class="address">London, UK</span>
+                            <span class="verified">
+                                <i class="fa-regular fa-check-square"></i>
+                                Verified Buyer
+                            </span>
+                        </p>
+                    </div>
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="review-text">
+                        This was my first time buying home decor from Facebook, and customer service came to the rescue. 10/10 service!
+                    </p>
+                </div>
 
-</div>
+            </div> <!-- end reviews -->
 
-        </div>
+        </div> <!-- end checkout-right -->
 
-    
-    <script>
-        const stateData = {
-            US: [
-                "Alabama","Alaska","Arizona","Arkansas","California",
-                "Colorado","Connecticut","Delaware","Florida","Georgia",
-                "Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
-                "Kentucky","Louisiana","Maine","Maryland","Massachusetts",
-                "Michigan","Minnesota","Mississippi","Missouri","Montana",
-                "Nebraska","Nevada","New Hampshire","New Jersey",
-                "New Mexico","New York","North Carolina","North Dakota",
-                "Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island",
-                "South Carolina","South Dakota","Tennessee","Texas",
-                "Utah","Vermont","Virginia","Washington","West Virginia",
-                "Wisconsin","Wyoming"
-            ],
-            CA: [
-                "Alberta","British Columbia","Manitoba",
-                "New Brunswick","Ontario","Quebec",
-                "Saskatchewan","Nova Scotia"
-            ],
-            PH: [
-                "Metro Manila","Cebu","Davao del Sur",
-                "Batangas","Laguna","Bulacan",
-                "Rizal","Pampanga","Iloilo"
-            ],
-            AU: [
-                "New South Wales",
-                "Victoria",
-                "Queensland",
-                "Western Australia",
-                "South Australia",
-                "Tasmania"
-            ],
-            GB: [
-                "England",
-                "Scotland",
-                "Wales",
-                "Northern Ireland"
-            ]
-        };
+    </div> <!-- end checkout -->
 
-        const country = document.getElementById("country");
-        const state = document.getElementById("state");
-
-        country.addEventListener("change", function() {
-            const states = stateData[this.value];
-            state.innerHTML = "";
-            if (!states) {
-                state.innerHTML = `<option value="">Not required</option>`;
-                state.disabled = true;
-                return;
-            }
-            state.disabled = false;
-            state.innerHTML = `<option value="" disabled selected hidden></option>`;
-            states.forEach(function(s) {
-                const option = document.createElement("option");
-                option.value = s;
-                option.textContent = s;
-                state.appendChild(option);
-            });
-        });
-
-        const billingRadios = document.querySelectorAll('input[name="billing"]');
-        const billingForm = document.getElementById("billing-form");
-
-        billingRadios.forEach(radio => {
-            radio.addEventListener("change", function() {
-                billingForm.style.display = this.value === "different" ? "block" : "none";
-            });
-        });
-
-        const billingCountry = document.getElementById("billing-country");
-        const billingState = document.getElementById("billing-state");
-
-        billingCountry.addEventListener("change", function() {
-            const states = stateData[this.value];
-            billingState.innerHTML = "";
-            if (!states) {
-                billingState.innerHTML = `<option value="">Not required</option>`;
-                billingState.disabled = true;
-                return;
-            }
-            billingState.disabled = false;
-            billingState.innerHTML = `<option value="" disabled selected hidden></option>`;
-            states.forEach(function(s) {
-                const option = document.createElement("option");
-                option.value = s;
-                option.textContent = s;
-                billingState.appendChild(option);
-            });
-        });
-    </script>
+<script src="./js/script.js"></script>
 
 </body>
 </html>
