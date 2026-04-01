@@ -67,7 +67,7 @@ body {
 
 .checkout-left {
   flex: 0 0 60%;
-  padding: 40px;
+  padding: 60px;
   overflow-y: auto;
   background-color: #FFFFFF;
 }
