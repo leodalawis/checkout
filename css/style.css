@@ -58,6 +58,7 @@ body {
   max-width: 1366px;
   align-items: center-center;
   margin: 0 auto; 
+  padding: 0px;
   display: flex;
   flex-wrap: nowrap; /* keep columns side by side */
   min-height: 100vh;
@@ -69,7 +70,7 @@ body {
   flex: 0 0 60%;
   padding: 60px;
   overflow-y: auto;
-  background-color: #b61717;
+  background-color: #FFFFFF;
 }
 
 
