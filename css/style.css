@@ -141,7 +141,7 @@ body {
 .paypal,
 .apple {
   width: 208px;
-  height: 48px;
+  height: 40px;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -160,7 +160,7 @@ body {
 .paypal:hover {
   background: #ffb81c;
   box-shadow: 0 4px 12px rgba(255, 196, 57, 0.4);
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .apple {
@@ -173,6 +173,11 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
+
+.paypal:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
 
 .paypal img {
   width: 79px;
