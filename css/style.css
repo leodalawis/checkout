@@ -74,10 +74,7 @@ body {
 
 .checkout-right {
   flex: 0 0 40%;
-  padding-left: 52px;
-  padding-right: 52px;
-  padding-top: 132px
-
+  padding: 52px 0 52px 52px;
   overflow-y: auto;
   background-color: #fafafa;
 }
