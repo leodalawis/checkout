@@ -201,7 +201,7 @@ body {
 /* Trigger animation on hover */
 .paypal:hover::before,
 .apple:hover::before {
-  animation: shine 1.5s ease-out;
+  animation: shine 0.9s ease-out;
 }
 
 /* KEYFRAMES */
