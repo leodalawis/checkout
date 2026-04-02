@@ -844,16 +844,16 @@ select.input:disabled {
   cursor: not-allowed;
 }
 
-.dropdown-icon {
+.checkout-left .input-group .dropdown-icon {
   width: 10px;
   height: 10px;
   align-items: center;
   justify-items: center;
+  justify-content: space-between;
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%); /* Center it vertically */
-  z-index: 1; /* Ensure it's above the select */
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
