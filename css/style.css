@@ -283,7 +283,7 @@ input[type="checkbox"] {
   width: 17px;
   height: 17px;
   background-color: #1b1b1b;
-  border: 2px solid #ccc;
+  border-radius: 3px;
   position: relative;
   cursor: pointer;
 }
