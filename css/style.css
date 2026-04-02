@@ -859,7 +859,7 @@ select.input:disabled {
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
-.tel-info {
+.tel-fieldtooltip {
   width: 16px;
   height: 16px;
   position: absolute;
