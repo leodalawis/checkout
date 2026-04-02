@@ -839,7 +839,7 @@ select.input:disabled {
   cursor: not-allowed;
 }
 
-.dropdown-icon {
+.dropdown-country {
   width: 10px;
   height: 10px;
   position: absolute;
@@ -849,7 +849,15 @@ select.input:disabled {
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
-
+.dropdown-state {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 12px;
+  top: 48%;
+  transform: translateY(-50%); /* Center it vertically */
+  pointer-events: none; /* Allows clicking "through" the icon to the select */
+}
 
 /* =========================
    PAYMENT INFORMATION FIX
