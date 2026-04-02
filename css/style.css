@@ -859,33 +859,26 @@ select.input:disabled {
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
-/* Update the parent */
 .input-tel {
-  position: relative; /* CRITICAL: Adds positioning context for children */
+  position: relative; /* Anchor for the icon */
+  display: block;
 }
 
-/* Tooltip styling */
-.tel-tooltip-bubble {
+.input.input {
+  width: 100%;
+  padding-right: 40px; /* Space for the icon */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.tel-fieldtooltip {
   position: absolute;
-  bottom: 110%; /* Place it above the icon */
-  right: 0;
-  background-color: #333;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s, visibility 0.2s;
-  pointer-events: none;
-  z-index: 10;
-}
-
-/* Show on hover of the icon */
-.tel-fieldtooltip:hover + .tel-tooltip-bubble {
-  opacity: 1;
-  visibility: visible;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  z-index: 2; /* Put it on top of the input */
+  cursor: pointer;
 }
 
 
