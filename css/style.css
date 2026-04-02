@@ -848,27 +848,42 @@ select.input:disabled {
     position: relative;
 }
 
+/* remove default arrow */
 .custom-select select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    background-color: #fff;
+
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 100%;
-    padding-right: 40px; /* space for icon */
+
+    font-size: 14px;
     cursor: pointer;
 }
 
-.arrow-icon {
+/* custom arrow */
+.custom-select::after {
+    content: "";
     position: absolute;
-    right: 10px;
+    right: 12px;
     top: 50%;
-    transform: translateY(-50%) rotate(0deg);
-    width: 16px;
+
+    width: 14px;
+    height: 14px;
+
+    background: url("/assets/images/arrowdown.png") no-repeat center;
+    background-size: contain;
+
+    transform: translateY(-50%);
     pointer-events: none;
-    transition: transform 0.3s ease;
 }
 
-/* when open (rotate arrow) */
-.custom-select.open .arrow-icon {
+/* rotate when focused */
+.custom-select:focus-within::after {
     transform: translateY(-50%) rotate(180deg);
 }
 
