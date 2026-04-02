@@ -37,16 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Billing form toggle
-    js
-    const differentAddressRadio = document.querySelector('#different-address');
-    const billingForm = document.querySelector('#billing-form');
+    const billingRadios = document.querySelectorAll('input[name="billing"]');
+    const billingForm = document.getElementById("billing-form");
 
-    differentAddressRadio.addEventListener('change', () => {
-    if (differentAddressRadio.checked) {
-        billingForm.style.display = 'block';
-    } else {
-        billingForm.style.display = 'none';
-    }
+    billingRadios.forEach(radio => {
+        radio.addEventListener("change", function() {
+            billingForm.style.display = this.value === "different" ? "block" : "none";
+        });
     });
 
     // Billing state dropdown

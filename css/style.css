@@ -602,18 +602,11 @@ h4 {
 }
 
 #billing-form {
-  display: none;
   background-color: #fafafa;
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
 
-}
-
-/* Show the form ONLY when the 'Different Address' radio is checked */
-/* Assuming the radio button has an ID like #different-address */
-#different-address:checked ~ #billing-form {
-  display: block;
 }
 
 
