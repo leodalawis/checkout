@@ -844,7 +844,33 @@ select.input:disabled {
   cursor: not-allowed;
 }
 
+.custom-select {
+    position: relative;
+}
 
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding-right: 40px; /* space for icon */
+    cursor: pointer;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 16px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+/* when open (rotate arrow) */
+.custom-select.open .arrow-icon {
+    transform: translateY(-50%) rotate(180deg);
+}
 
 
 
