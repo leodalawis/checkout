@@ -859,28 +859,54 @@ select.input:disabled {
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
-/* Update the parent */
+/* Container positioning */
 .input-tel {
-  position: relative; /* CRITICAL: Adds positioning context for children */
+  position: relative;
+  width: 100%;
+  display: block;
 }
 
-/* Tooltip styling */
-.tel-tooltip-bubble {
+/* Input padding to avoid overlap */
+.input-tel input.input {
+  width: 100%;
+  padding-right: 40px !important;
+  box-sizing: border-box;
+}
+
+/* Icon positioning */
+.tel-fieldtooltip {
   position: absolute;
   right: 12px;
-  top:40%;
-  transform: translateY(-50%);
+  top: 15px; /* Adjust based on input height */
   width: 16px;
   height: 16px;
-  z-index: 1;
+  z-index: 2;
+  cursor: pointer;
 }
 
-/* Show on hover of the icon */
+/* Tooltip bubble positioning */
+.tel-tooltip-bubble {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 8px;
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Show tooltip on hover */
 .tel-fieldtooltip:hover + .tel-tooltip-bubble {
   opacity: 1;
   visibility: visible;
 }
-
 
 /* =========================
    PAYMENT INFORMATION FIX
