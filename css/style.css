@@ -845,6 +845,10 @@ select.input:disabled {
 }
 
 .dropdown-icon {
+  width: 10px;
+  height: 10px;
+  align-items: center;
+  justify-items: center;
   position: absolute;
   right: 10px;
   top: 50%;
