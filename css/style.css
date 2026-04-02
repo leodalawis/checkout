@@ -343,6 +343,12 @@ h4 {
   color: #292929;
 }
 
+p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
 .complete-order {
   align-items: center;
   gap: 11px;
