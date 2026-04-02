@@ -850,7 +850,7 @@ select.input:disabled {
   height: 10px;
   position: absolute;
   right: 12px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%); /* Center it vertically */
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
