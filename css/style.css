@@ -859,6 +859,14 @@ select.input:disabled {
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
+.tel-info {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+}
 /* =========================
    PAYMENT INFORMATION FIX
 ========================= */
