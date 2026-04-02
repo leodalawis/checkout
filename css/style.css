@@ -277,33 +277,34 @@ body {
 
 
 /* Hide default */
+/* Custom checkbox base */
 input[type="checkbox"] {
   appearance: none;
   width: 17px;
   height: 17px;
+  background-color: #1b1b1b;
   border: 2px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
 }
 
-/* Checked state */
-input[type="checkbox"]:checked {
-  background: #1B1B1B;
-  border-color: #1B1B1B;
-}
-
-/* Checkmark */
-input[type="checkbox"]:checked::after {
-  content: '';
+/* The checkmark (initially invisible) */
+input[type="checkbox"]::after {
+  content: "";
   position: absolute;
   top: 3px;
   left: 5px;
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 10px;
   border: solid #FFFFFF;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+  display: none; /* Hidden by default */
+}
+
+/* Show the checkmark when checked */
+input[type="checkbox"]:checked::after {
+  display: block;
 }
 
 .row {
@@ -725,7 +726,7 @@ input[type="radio"]:checked::after {
 .lock-icon {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
