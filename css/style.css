@@ -860,7 +860,7 @@ select.input:disabled {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
+    z-index: 1;
     font-size: 14px;
     cursor: pointer;
 }
@@ -871,7 +871,7 @@ select.input:disabled {
     position: absolute;
     right: 12px;
     top: 50%;
-
+    z-index: 2;
     width: 14px;
     height: 14px;
 
