@@ -859,14 +859,22 @@ select.input:disabled {
   pointer-events: none; /* Allows clicking "through" the icon to the select */
 }
 
+/* Update the parent */
+.input-tel {
+  position: relative; /* CRITICAL: Adds positioning context for children */
+}
+
+/* Update the image icon */
 .tel-fieldtooltip {
-  width: 16px;
-  height: 16px;
   position: absolute;
   right: 12px;
-  top: 40%;
-  transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%); /* Better way to center vertically */
+  width: 16px;
+  height: 16px;
+  z-index: 1; /* Ensure it's above the input background */
 }
+
 /* =========================
    PAYMENT INFORMATION FIX
 ========================= */
