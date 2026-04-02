@@ -864,16 +864,30 @@ select.input:disabled {
   position: relative; /* CRITICAL: Adds positioning context for children */
 }
 
-/* Update the image icon */
-.tel-fieldtooltip {
+/* Tooltip styling */
+.tel-tooltip-bubble {
   position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%); /* Better way to center vertically */
-  width: 16px;
-  height: 16px;
-  z-index: 1; /* Ensure it's above the input background */
+  bottom: 110%; /* Place it above the icon */
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  pointer-events: none;
+  z-index: 10;
 }
+
+/* Show on hover of the icon */
+.tel-fieldtooltip:hover + .tel-tooltip-bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 /* =========================
    PAYMENT INFORMATION FIX
