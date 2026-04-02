@@ -602,11 +602,17 @@ h4 {
 }
 
 #billing-form {
+  display: none; /* Hidden by default, shown when "Use a different billing address" is checked */ 
   background-color: #fafafa;
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
 
+}
+
+/* Show only when the second radio is checked */
+input[name="billing-address"]:checked ~ #billing-form {
+  display: block;
 }
 
 
