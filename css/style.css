@@ -246,11 +246,6 @@ body {
    FLOATING LABEL (SELECT)
 ========================= */
 
-.input-group {
-  position: relative;
-  margin-bottom: 12px;
-}
-
 .input-group .input {
   padding-top: 20px;
   padding-bottom: 8px;
@@ -750,7 +745,7 @@ input[type="radio"]:checked::after {
   padding: 14px;
   padding-right: 35px;
   margin-bottom: 15px;
-  border: 2px solid #D9D9D9;
+  border: 1px solid #D9D9D9;
   border-radius: 8px;
   font-size: 15px;
   background: #fff;
